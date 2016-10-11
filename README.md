@@ -27,6 +27,10 @@ gem install bundler
 bundle install
 ```
 
+### Change Capistrano Version
+
+If you want to change capistrano version, edit `Gemfile` and `config/deploy.rb`, then run `bundle install`.
+
 ## How to Use
 
 1. Edit configuration files in config/, change application names, application paths, python version
