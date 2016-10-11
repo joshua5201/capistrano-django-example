@@ -1,0 +1,25 @@
+server {
+	listen 80;
+	server_name example.org;
+
+	access_log /var/log/nginx/application_name_staging-access.log;
+	error_log /var/log/nginx/application_name_staging-error.log;
+
+	client_max_body_size 32M;
+
+	location /static {
+		alias /home/deploy/application_name_staging/current/staticfiles;
+		try_files $uri $uri/ =404;
+	}
+
+	location /media {
+		alias /home/deploy/application_name_staging/current/media;
+		try_files $uri $uri/ =404;
+	}
+
+	location / {
+		uwsgi_pass unix:///home/deploy/application_name_staging/shared/uwsgi/socket;
+		include uwsgi_params;
+	}
+}
+
