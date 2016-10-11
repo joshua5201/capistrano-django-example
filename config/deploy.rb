@@ -1,7 +1,7 @@
 # config valid only for current version of Capistrano
 lock '3.6.0'
 
-set :application, 'directgo_goods'
+set :application, 'application_name'
 set :repo_url, 'git@github.com:username/repo_name.git'
 set :python_version, '3.5.2'
 set :virtualenv_path, 'venv'
