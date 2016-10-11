@@ -31,7 +31,7 @@ bundle install
 
 1. Edit configuration files in config/, change application names, application paths, python version
 2. Create shared files and folders in target machine
-3. run `cap -T staging/production pyenv:install`
-4. run `cap -T staging/production virtualenv:install`
-5. run `cap -T staging/production deploy`
+3. run `cap staging/production pyenv:install`
+4. run `cap staging/production virtualenv:install`
+5. run `cap staging/production deploy`
 6. Setting up your nginx config files (see nginx\_application.example)
