@@ -12,7 +12,22 @@ Including the configuration of:
 5. migration
 6. uwsgi config and process management
 
-## How to use
+## Setting Ruby Environment
+
+### Install Ruby
+
+If you're not familiar with Ruby, you can follow steps from [Rails Bridge Installfest](http://docs.railsbridge.org/installfest/).
+
+Just follow the steps until the Rails section (you don't need to install Rails).
+
+### Install Packages
+
+```bash
+gem install bundler
+bundle install
+```
+
+## How to Use
 
 1. Edit configuration files in config/, change application names, application paths, python version
 2. Create shared files and folders in target machine
